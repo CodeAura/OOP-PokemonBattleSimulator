@@ -1,8 +1,8 @@
 using System;
 
-namespace Charmander 
+namespace BattleSimulator 
 {
-    class Pokemon {
+    public class Pokemon {
         public String? name;
         public String? typeAttack;
         public String? weakness;
@@ -36,6 +36,11 @@ namespace Charmander
         }
         public String? getBattleCry() {
             return BattleCry;
+        }
+
+
+        public void useBattleCry() {
+            Console.WriteLine(getName() + " uses their battleCry: " + getBattleCry());
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\Charmander\\Charmander.csproj": {}
+    "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\Charmander\\Charmander.csproj": {
+    "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\Charmander\\Charmander.csproj",
+        "projectUniqueName": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
         "projectName": "Charmander",
-        "projectPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\Charmander\\Charmander.csproj",
+        "projectPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
         "packagesPath": "C:\\Users\\Mikel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\Charmander\\obj\\",
+        "outputPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
