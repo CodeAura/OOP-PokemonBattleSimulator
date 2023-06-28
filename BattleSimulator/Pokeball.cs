@@ -3,16 +3,31 @@ using System;
 
 namespace BattleSimulator;
 
-class Pokeballs {
-    public int Belt = 6;
+internal class Pokeball 
+{
+        Pokemon charmander;
 
-    public void setPokeBalls(int pokeBalls) {
-        this.Belt = pokeBalls;
-    }
-
-    public void usePokeballs() {
-        for(int i = 0; i < this.Belt; i++) {
-            Console.WriteLine("You have " + i + "pokeballs Left");
+        public Pokeball(Pokemon charmander)
+        {
+            this.charmander = charmander;
         }
-    }
+
+        public void openPokeball()
+        {
+            Console.WriteLine("The pokeball is opened\n");
+            Console.WriteLine("The Pokeball contains a " + charmander.getName());
+            charmander.setBattleCry("Rawhh");
+            charmander.useBattleCry();
+
+            Console.WriteLine("\nPlease enter your new " + charmander.getName() + " name");
+            string? pokemonName = Console.ReadLine();
+            charmander.setName(pokemonName);
+            charmander.useBattleCry();
+
+        }
+
+        public void closePokeball()
+        {
+            Console.WriteLine("The pokeball is closed.\n");
+        }
 }

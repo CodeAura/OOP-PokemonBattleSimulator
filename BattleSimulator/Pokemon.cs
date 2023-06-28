@@ -3,21 +3,31 @@ using System;
 namespace BattleSimulator 
 {
     public class Pokemon {
-        public String? name;
-        public String? typeAttack;
-        public String? weakness;
+        string name;
+        string typeAttack;
+        string weakness;
 
         public String? BattleCry;
+
+
+
+        public Pokemon(String name, String typeAttack, String weakness) 
+        {
+            this.name = name;
+            this.typeAttack = typeAttack;
+            this.weakness = weakness;
+        }
+
+
 
         public void setName(String name) { 
             this.name = name;
         }
-        public void setAttack(String typeAttack) {
+
+        public void setTypeAttack(String typeAttack) {
             this.typeAttack = typeAttack;
         }
-        public void setWeakness(String weakness) {
-            this.weakness = weakness;
-        }
+
 
         public void setBattleCry(String BattleCry) {
             this.BattleCry = BattleCry;

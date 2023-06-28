@@ -1,5 +1,7 @@
-namespace BattleSimulator {
-    public class Game {
+namespace BattleSimulator 
+{
+    public class Game 
+    {
 
         
     }
