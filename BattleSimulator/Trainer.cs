@@ -33,7 +33,7 @@ namespace BattleSimulator
             Console.WriteLine(name + " has returned a pokemon.\n");
 
             belt[number].closePokeball();
-            Console.WriteLine(name + " has " + number + " pokeballs left");
+            Console.WriteLine(name + " has thrown" + number + " pokeballs.");
         }
         } 
 }

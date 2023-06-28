@@ -5,24 +5,27 @@ namespace BattleSimulator;
 
 internal class Pokeball 
 {
-        Pokemon charmander;
+        Pokemon pokemon;
 
-        public Pokeball(Pokemon charmander)
+        public Pokeball(Pokemon pokemon)
         {
-            this.charmander = charmander;
+            this.pokemon = pokemon;
         }
 
         public void openPokeball()
         {
             Console.WriteLine("The pokeball is opened\n");
-            Console.WriteLine("The Pokeball contains a " + charmander.getName());
-            charmander.setBattleCry("Rawhh");
-            charmander.useBattleCry();
+            Console.WriteLine("The Pokeball contains a " + pokemon.getName());
 
-            Console.WriteLine("\nPlease enter your new " + charmander.getName() + " name");
+            Console.WriteLine("Attack Type: " + pokemon.getTypeAttack());
+            Console.WriteLine("Weakness: " + pokemon.getWeakness());
+            pokemon.setBattleCry("Rawhh");
+            pokemon.useBattleCry();
+
+            Console.WriteLine("\nPlease enter your new " + pokemon.getName() + " name");
             string? pokemonName = Console.ReadLine();
-            charmander.setName(pokemonName);
-            charmander.useBattleCry();
+            pokemon.setName(pokemonName);
+            pokemon.useBattleCry();
 
         }
 

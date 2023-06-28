@@ -18,8 +18,6 @@ namespace BattleSimulator
             this.weakness = weakness;
         }
 
-
-
         public void setName(String name) { 
             this.name = name;
         }
