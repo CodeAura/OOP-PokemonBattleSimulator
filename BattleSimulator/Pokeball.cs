@@ -19,7 +19,7 @@ internal class Pokeball
 
             Console.WriteLine("Attack Type: " + pokemon.getTypeAttack());
             Console.WriteLine("Weakness: " + pokemon.getWeakness());
-            pokemon.setBattleCry("Rawhh");
+            pokemon.setBattleCry(pokemon.getName() + "!");
             pokemon.useBattleCry();
 
             Console.WriteLine("\nPlease enter your new " + pokemon.getName() + " name");

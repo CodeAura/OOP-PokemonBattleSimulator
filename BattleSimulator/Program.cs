@@ -12,15 +12,15 @@
             List<Pokeball> beltChallanger = new List<Pokeball>();
 
             // ! Opponent 
-            beltOpponent.Add(new Pokeball(new Pokemon("Charmander", "Fire", "Water")));
-            beltOpponent.Add(new Pokeball(new Pokemon("Bulbasaur", "Grass", "Fire")));
+            beltOpponent.Add(new Pokeball(new Charmander("Charmander", "Fire", "Water")));
+            beltOpponent.Add(new Pokeball(new Bulbasar("Bulbasaur", "Grass", "Fire")));
             Trainer opponent = new Trainer(Oname, beltOpponent);
             trainers.Add(new Trainer(Oname, beltOpponent));
 
             // ! Challanger 
 
-            beltChallanger.Add(new Pokeball(new Pokemon("Charmander", "Fire", "Water")));
-            beltChallanger.Add(new Pokeball(new Pokemon("Squirtle", "Water", "Grass")));
+            beltChallanger.Add(new Pokeball(new Charmander("Charmander", "Fire", "Water")));
+            beltChallanger.Add(new Pokeball(new Squirtle("Squirtle", "Water", "Grass")));
             Trainer challanger = new Trainer(Cname, beltChallanger);
             trainers.Add(new Trainer(Cname, beltChallanger));
 
