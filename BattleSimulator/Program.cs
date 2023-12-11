@@ -64,7 +64,11 @@
                         Console.WriteLine(Oname + " Won! | " + Cname + " You lose!");
                     }
                 }
-            Battle.SimulateBattle(opponent, challanger, beltChallanger, beltOpponent);
+                string ChallangerBelt = String.Join(",", beltChallanger);
+                string OpponentBelt = String.Join(",",beltOpponent);
+
+                Console.WriteLine(ChallangerBelt, OpponentBelt);
+            Battle.SimulateBattle(opponent, challanger, ChallangerBelt, OpponentBelt);
             }
 
         }
