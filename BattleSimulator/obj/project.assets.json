@@ -8,26 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mikel\\.nuget\\packages\\": {}
+    "C:\\Users\\Mike\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
+      "projectUniqueName": "C:\\Users\\Mike\\Documents\\GitHub\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
       "projectName": "Charmander",
-      "projectPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
-      "packagesPath": "C:\\Users\\Mikel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mikel\\Documents\\Git\\OOP-PokemonBattleSimulator\\BattleSimulator\\obj\\",
+      "projectPath": "C:\\Users\\Mike\\Documents\\GitHub\\OOP-PokemonBattleSimulator\\BattleSimulator\\Charmander.csproj",
+      "packagesPath": "C:\\Users\\Mike\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mike\\Documents\\GitHub\\OOP-PokemonBattleSimulator\\BattleSimulator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mike\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
       }
     }
   }
