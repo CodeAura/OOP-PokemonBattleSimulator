@@ -4,6 +4,12 @@
     using System.Collections.Generic;
     internal class Program
     {
+        static void CreateBattle() 
+        {
+
+        }
+  
+
         static void addTrainerToList(string Oname, string Cname) {
 
             // ! Trainers
@@ -18,7 +24,6 @@
             trainers.Add(new Trainer(Oname, beltOpponent));
 
             // ! Challanger 
-
             beltChallanger.Add(new Pokeball(new Charmander("Charmander", "Fire", "Water")));
             beltChallanger.Add(new Pokeball(new Squirtle("Squirtle", "Water", "Grass")));
             Trainer challanger = new Trainer(Cname, beltChallanger);
@@ -26,7 +31,8 @@
 
 
             Console.WriteLine("The chosen Trainers: " + String.Join(", ", trainers));
-
+            
+            // Battle.ThrowBalls(Oname, Cname, beltChallanger, beltOpponent);
 
             for (int i = 1; i < 3; i++) {
                 if(i == 1) {
@@ -34,10 +40,10 @@
                     string? QOname = Console.ReadLine();
                     if (QOname == "y") {
                          for (int x = 0; x < beltOpponent.Count; x++) 
-                         {
+                        {
                             opponent.throwBall(x);
                             opponent.closePokeball(x);
-                         }
+                        }
                     }
                     if (QOname == "n") {
                         Console.WriteLine(Cname + " Won! | " + Oname + " You lose!");
@@ -58,6 +64,7 @@
                         Console.WriteLine(Oname + " Won! | " + Cname + " You lose!");
                     }
                 }
+            Battle.SimulateBattle(opponent, challanger, beltChallanger, beltOpponent);
             }
 
         }
@@ -95,7 +102,7 @@
             setTrainers(Oname, Cname);
 
 
-            // Question
+            // Question 
 
             Console.WriteLine("Do you want to restart the game? (y/n)");
             string? Question = Console.ReadLine();

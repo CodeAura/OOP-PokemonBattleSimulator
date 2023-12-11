@@ -5,7 +5,7 @@ namespace BattleSimulator;
 
 internal class Pokeball 
 {
-        Pokemon pokemon;
+        public Pokemon pokemon;
 
         public Pokeball(Pokemon pokemon)
         {

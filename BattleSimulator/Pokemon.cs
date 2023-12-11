@@ -63,6 +63,8 @@ namespace BattleSimulator
             this.typeAttack = typeAttack;
             this.weakness = weakness;
         }
+
+        
     }
 
 
