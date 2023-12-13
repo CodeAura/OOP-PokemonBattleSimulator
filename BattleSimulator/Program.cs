@@ -4,12 +4,18 @@
     using System.Collections.Generic;
     internal class Program
     {
+
         static void CreateBattle() 
         {
-
+            Console.Write("Simulating Battle... ");
+		        using (var progress = new ProgressBar()) {
+			        for (int count = 0; count <= 100; count++) {
+				    progress.Report((double) count / 100);
+				    Thread.Sleep(20);
+			        }
+		        }
+		        Console.WriteLine("Done.");
         }
-  
-
         static void addTrainerToList(string Oname, string Cname) {
 
             // ! Trainers
@@ -67,8 +73,8 @@
                 string ChallangerBelt = String.Join(",", beltChallanger);
                 string OpponentBelt = String.Join(",",beltOpponent);
 
-                Console.WriteLine(ChallangerBelt, OpponentBelt);
-            Battle.SimulateBattle(opponent, challanger, ChallangerBelt, OpponentBelt);
+                CreateBattle();
+                Battle.SimulateBattle(opponent, challanger, ChallangerBelt, OpponentBelt);
             }
 
         }
