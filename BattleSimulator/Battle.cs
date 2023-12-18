@@ -21,7 +21,6 @@ namespace BattleSimulator
 
         public static void SimulateBattle(Trainer challenger, Trainer opponent)
         {
-            Console.WriteLine("Battle Start!");
             Console.WriteLine($"Battle Start: {challenger.Name} vs {opponent.Name}");
 
             Pokemon challengerPokemon = challenger.belt[1].pokemon;
