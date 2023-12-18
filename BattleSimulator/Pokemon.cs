@@ -25,6 +25,9 @@ namespace BattleSimulator
             this.name = name;
         }
 
+        public string PokemonName => name;
+
+
         public void setTypeAttack(String typeAttack) {
             this.typeAttack = typeAttack;
         }

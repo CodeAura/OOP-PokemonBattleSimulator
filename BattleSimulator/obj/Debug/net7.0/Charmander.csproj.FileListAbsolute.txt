@@ -36,3 +36,10 @@ C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulat
 C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\obj\Debug\net7.0\Charmander.dll
 C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\obj\Debug\net7.0\refint\Charmander.dll
 C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\obj\Debug\net7.0\Charmander.pdb
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\bin\Debug\net7.0\Charmander.exe
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\bin\Debug\net7.0\Charmander.deps.json
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\bin\Debug\net7.0\Charmander.runtimeconfig.json
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\bin\Debug\net7.0\Charmander.dll
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\bin\Debug\net7.0\Charmander.pdb
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\obj\Debug\net7.0\Charmander.genruntimeconfig.cache
+C:\Users\Mikel\Documents\Git\OOP-PokemonBattleSimulator\OOP-PokemonBattleSimulator\BattleSimulator\obj\Debug\net7.0\ref\Charmander.dll

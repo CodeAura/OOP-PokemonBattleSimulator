@@ -1,132 +1,56 @@
-namespace BattleSimulator 
+
+namespace BattleSimulator
 {
+    using System.Threading;
 
-class Battle
-{
-    Trainer challanger;
-    Trainer opponent;
-
-    Pokemon pokemon;
-    Pokeball pokeball;
-   
-    public Battle(Trainer opponent, Trainer challanger) {
-        this.opponent = opponent;
-        this.challanger = challanger;
-    }
-    // public static void ThrowBalls(string Oname, string Cname, string beltOpponent, string beltChallanger) {
-    //     for (int i = 1; i < 3; i++) {
-    //             if(i == 1) {
-    //                 Console.WriteLine(Oname + " Throw! (y/n)");
-    //                 string? QOname = Console.ReadLine();
-    //                 if (QOname == "y") {
-    //                     for (int x = 0; x < beltOpponent.Count; x++) 
-    //                     {
-    //                         opponent.throwBall(x);
-    //                         opponent.closePokeball(x);
-    //                     }    
-    //                 }
-    //                 if (QOname == "n") {
-    //                     Console.WriteLine(Cname + " Won! | " + Oname + " You lose!");
-    //                     continue;
-    //                 }
-    //             }
-    //             else if(i == 2) {
-    //                 Console.WriteLine(Cname + " Throw! (y/n)");
-    //                 string? CQname = Console.ReadLine();
-    //                 if(CQname == "y") {
-    //                      for (int y = 0; y < beltChallanger.Count; y++) 
-    //                      {
-    //                         challanger.throwBall(y);
-    //                         challanger.closePokeball(y);
-    //                      }
-    //                 }
-    //                 if (CQname == "n") {
-    //                     Console.WriteLine(Oname + " Won! | " + Cname + " You lose!");
-    //                 }
-    //             }
-    //         }
-
-    public static string previous_winner;
-
-    public static void SimulateBattle(Trainer opponent, Trainer challanger, string beltOpponent, string beltChallanger)
+    class Battle
     {
-        int? scoreboard = 0;
-        string? winner = "";
+        public Trainer challenger;
+        public Trainer opponent;
 
-        bool defeated_pokemon1 = false;
-        bool defeated_pokemon2 = false;
-        
-        if (opponent.belt[beltOpponent].pokemon?.getWeakness() == challanger.belt[beltChallanger].pokemon?.getTypeAttack())
+        public Pokemon pokemon;
+        public Pokeball pokeball;
+
+        public Battle(Trainer opponent, Trainer challenger, Pokemon pokemon, Pokeball pokeball)
         {
-            winner = challanger.getName();
-            previous_winner = challanger.getName();
-            scoreboard += 1;
-            defeated_pokemon1 = true;
-        }
-        else if (opponent.belt[beltOpponent].pokemon?.getTypeAttack() == challanger.belt[beltChallanger].pokemon?.getWeakness())
-        {
-            winner = opponent.getName();
-            previous_winner = opponent.getName();
-            scoreboard += 1;
-            defeated_pokemon2 = true;
-        }
-        else
-        {
-            winner = "nobody";
+            this.opponent = opponent;
+            this.challenger = challenger;
+            this.pokemon = pokemon;
+            this.pokeball = pokeball;
         }
 
-        Console.Write("");
-        opponent.belt[beltOpponent].pokemon?.getBattleCry();
-        Console.WriteLine("");
-
-        challanger.belt[beltChallanger].pokemon?.getBattleCry();
-        Console.WriteLine("");
-
-        Console.WriteLine(winner + " wins");
-        Console.WriteLine("");
-
-        if (winner == "nobody")
+        public static void SimulateBattle(Trainer challenger, Trainer opponent)
         {
-            if (previous_winner == null)
-            {
-                Console.WriteLine(opponent.getName() + " calls back " + opponent.belt[beltOpponent].pokemon?.getName());
-                opponent.belt[beltOpponent].closePokeball();
+            Console.WriteLine("Battle Start!");
+            Console.WriteLine($"Battle Start: {challenger.Name} vs {opponent.Name}");
 
-                Console.WriteLine(challanger.getName() + " calls back " + challanger.belt[beltChallanger].pokemon?.name);
-                challanger.belt[beltChallanger].closePokeball();
-                beltOpponent += 1;
-            } else if(previous_winner == opponent.getName())
-            {
-                Console.WriteLine(challanger.getName() + " calls back " + challanger.belt[beltChallanger].pokemon?.name);
-                challanger.belt[beltChallanger].closePokeball();
-                beltChallanger += 1;
-            }
-            else if (previous_winner == challanger.getName())
-            {
-                Console.WriteLine(opponent.getName() + " calls back " + opponent.belt[beltOpponent].pokemon?.name);
-                opponent.belt[beltOpponent].closePokeball();
-                beltOpponent += 1;
-            }
+            Pokemon challengerPokemon = challenger.belt[1].pokemon;
+            Pokemon opponentPokemon = opponent.belt[1].pokemon;
+
+
+            Thread.Sleep(1000);
+            Console.WriteLine($"{challenger.Name}: {challenger.belt[1].pokemon.name} I choose you!");
+            Thread.Sleep(500);
+            Console.WriteLine($"{opponent.Name}: {opponent.belt[1].pokemon.name} I choose you!");
+            Thread.Sleep(1000);
             
+            if (challengerPokemon.typeAttack == opponentPokemon.weakness)
+            {
+            Console.WriteLine($"{challengerPokemon.name} Uses {challengerPokemon.typeAttack}");
+            Console.WriteLine($"{challenger.Name}'s {challengerPokemon.name} is super effective!");
+            Console.WriteLine($"{challenger.Name} Wins!");
+            }
+            else if (opponentPokemon.typeAttack == challengerPokemon.weakness)
+            {
+            Console.WriteLine($"{opponentPokemon.name} Uses {opponentPokemon.typeAttack}");
+            Console.WriteLine($"{opponent.Name}'s {opponentPokemon.name} is super effective!");
+            Console.WriteLine($"{opponent.Name} Wins!");
+            }
+            else
+            {
+            Console.WriteLine("It's a draw!");
+            }
+            Console.WriteLine("Battle End!");
         }
-        else if (defeated_pokemon1)
-        {
-            Console.WriteLine(opponent.getName() + " calls back " + opponent.belt[beltOpponent].pokemon?.name);
-            opponent.belt[beltOpponent].closePokeball();
-            defeated_pokemon1 = false;
-            beltOpponent += 1;
-            
-        }
-        else if (defeated_pokemon2)
-        {
-            Console.WriteLine(challanger.getName() + " calls back " + challanger.belt[beltChallanger].pokemon?.name);
-            challanger.belt[beltChallanger].closePokeball();
-            defeated_pokemon2 = false;
-            beltChallanger += 1;
-        }
-
     }
-
-}
-
 }

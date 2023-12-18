@@ -4,18 +4,6 @@
     using System.Collections.Generic;
     internal class Program
     {
-
-        static void CreateBattle() 
-        {
-            Console.Write("Simulating Battle... ");
-		        using (var progress = new ProgressBar()) {
-			        for (int count = 0; count <= 100; count++) {
-				    progress.Report((double) count / 100);
-				    Thread.Sleep(20);
-			        }
-		        }
-		        Console.WriteLine("Done.");
-        }
         static void addTrainerToList(string Oname, string Cname) {
 
             // ! Trainers
@@ -36,7 +24,9 @@
             trainers.Add(new Trainer(Cname, beltChallanger));
 
 
-            Console.WriteLine("The chosen Trainers: " + String.Join(", ", trainers));
+            Console.WriteLine("The chosen Trainers: " + string.Join(", ", trainers.Select(trainer => trainer.GetName())));
+
+            
             
             // Battle.ThrowBalls(Oname, Cname, beltChallanger, beltOpponent);
 
@@ -47,8 +37,8 @@
                     if (QOname == "y") {
                          for (int x = 0; x < beltOpponent.Count; x++) 
                         {
-                            opponent.throwBall(x);
-                            opponent.closePokeball(x);
+                            opponent.ThrowBall(x);
+                            opponent.ClosePokeball(x);
                         }
                     }
                     if (QOname == "n") {
@@ -62,20 +52,16 @@
                     if(CQname == "y") {
                          for (int y = 0; y < beltChallanger.Count; y++) 
                          {
-                            challanger.throwBall(y);
-                            challanger.closePokeball(y);
+                            challanger.ThrowBall(y);
+                            challanger.ClosePokeball(y);
                          }
                     }
                     if (CQname == "n") {
                         Console.WriteLine(Oname + " Won! | " + Cname + " You lose!");
                     }
                 }
-                string ChallangerBelt = String.Join(",", beltChallanger);
-                string OpponentBelt = String.Join(",",beltOpponent);
-
-                CreateBattle();
-                Battle.SimulateBattle(opponent, challanger, ChallangerBelt, OpponentBelt);
             }
+            Battle.SimulateBattle(opponent, challanger);
 
         }
         // Trainer

@@ -3,7 +3,7 @@ using System;
 
 namespace BattleSimulator;
 
-internal class Pokeball 
+public class Pokeball 
 {
         public Pokemon pokemon;
 
@@ -21,12 +21,6 @@ internal class Pokeball
             Console.WriteLine("Weakness: " + pokemon.getWeakness());
             pokemon.setBattleCry(pokemon.getName() + "!");
             pokemon.useBattleCry();
-
-            Console.WriteLine("\nPlease enter your new " + pokemon.getName() + " name");
-            string? pokemonName = Console.ReadLine();
-            pokemon.setName(pokemonName);
-            pokemon.useBattleCry();
-
         }
 
         public void closePokeball()

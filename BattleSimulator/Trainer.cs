@@ -2,7 +2,7 @@ using System;
 
 namespace BattleSimulator 
 {
-    internal class Trainer {
+     class Trainer {
 
         string name;
         int number = 6;
@@ -15,25 +15,22 @@ namespace BattleSimulator
             this.belt = belt;
         }
 
-        public String? getName() 
+        public string GetName() 
         {
             return name;
         }
 
-        public override String ToString() 
-        {
-            return name;
-        }
+        public string Name => name;
 
 
-        public void throwBall(int number) 
+        public void ThrowBall(int number) 
         {
             Console.WriteLine(name + " has thrown a pokeball.");
 
             belt[number].openPokeball();
         }
 
-        public void closePokeball(int number = 1)
+        public void ClosePokeball(int number = 1)
         {
             Console.WriteLine(name + " has returned a pokemon.\n");
 
